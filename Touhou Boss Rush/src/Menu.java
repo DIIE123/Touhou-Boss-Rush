@@ -62,7 +62,7 @@ public class Menu extends JPanel implements KeyListener, ActionListener{
 
 
 	//char 1, char 2, char 3
-	JLabel[] charOption = {new JLabel(new ImageIcon("Touhou Reimu Portrait.png")),new JLabel(new ImageIcon("Touhou Marisa Portrait.png")),new JLabel(new ImageIcon("Touhou Sanae Portrait.png"))};
+	JLabel[] charOption = {new JLabel(new ImageIcon("Images/Touhou Reimu Portrait.png")),new JLabel(new ImageIcon("Images/Touhou Marisa Portrait.png")),new JLabel(new ImageIcon("Images/Touhou Sanae Portrait.png"))};
 
 	int charSelect = 0;
 
@@ -102,7 +102,7 @@ public class Menu extends JPanel implements KeyListener, ActionListener{
 		//music
 		//music loader
 		try {
-			AudioInputStream sound = AudioSystem.getAudioInputStream(new File ("menu.wav"));
+			AudioInputStream sound = AudioSystem.getAudioInputStream(new File ("Sounds/menu.wav"));
 			music = AudioSystem.getClip();
 			music.open(sound);
 			music.start();
@@ -117,7 +117,7 @@ public class Menu extends JPanel implements KeyListener, ActionListener{
 		for (int i = 0; i < menus.length; i ++) {
 			menus[i].setOpaque(false);
 		}
-		title = new JLabel (new ImageIcon("title.png"));
+		title = new JLabel (new ImageIcon("Images/title.png"));
 		title.setBorder(new EmptyBorder(50, 0, 50, 0));
 		menus[0].add(title);
 		menuDisplay[0].setIcon(menuOptionSelected[0].getIcon());
@@ -205,7 +205,7 @@ public class Menu extends JPanel implements KeyListener, ActionListener{
 		menus[3].add(nameButton);
 
 		//how to play
-		infoLabel = new JLabel(new ImageIcon("aboutus.png"));
+		infoLabel = new JLabel(new ImageIcon("Images/aboutus.png"));
 		infoLabel.setOpaque(true);
 		infoLabel.setBackground(Color.WHITE);
 		infoLabel.setFont(new Font("Courier", Font.BOLD,20));
@@ -428,7 +428,7 @@ public class Menu extends JPanel implements KeyListener, ActionListener{
 	    try
 	    {
 	        Clip clip = AudioSystem.getClip();
-	        AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(file));
+	        AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("Sounds/" + file));
 	        clip.open(inputStream);
 	        clip.addLineListener(new CloseClipWhenDone());
 	        clip.start();
@@ -509,9 +509,9 @@ public class Menu extends JPanel implements KeyListener, ActionListener{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-			menuSpriteSheet = ImageIO.read(new File("menu.png"));
-			bg = ImageIO.read(new File("background2.png"));
-			bg2 = ImageIO.read(new File("background.png"));
+			menuSpriteSheet = ImageIO.read(new File("Images/menu.png"));
+			bg = ImageIO.read(new File("Images/background2.png"));
+			bg2 = ImageIO.read(new File("Images/background.png"));
 		}
 		catch(IOException e) {
 

@@ -218,7 +218,7 @@ public class endMenu extends JPanel implements KeyListener {
 	    try
 	    {
 	        Clip clip = AudioSystem.getClip();
-	        AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(file));
+	        AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("Sounds/" + file));
 	        clip.open(inputStream);
 	        clip.addLineListener(new CloseClipWhenDone());
 	        clip.start();
@@ -309,8 +309,8 @@ public class endMenu extends JPanel implements KeyListener {
 
 	public static void main (String[] args) {
 		try {
-			menuSpriteSheet = ImageIO.read(new File("menu.png"));
-			bg = ImageIO.read(new File("background2.png"));
+			menuSpriteSheet = ImageIO.read(new File("Images/menu.png"));
+			bg = ImageIO.read(new File("Images/background2.png"));
 
 		}
 		catch(IOException e) {

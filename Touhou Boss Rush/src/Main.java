@@ -93,45 +93,45 @@ public class Main extends JPanel implements KeyListener {
 		// Imports Images
 		try {
 			// Backgrounds
-			backgrounds[0] = ImageIO.read(new File("Touhou Boss 1 Background.png"));
-			backgrounds[1] = ImageIO.read(new File("Touhou Boss 2 Background.png"));
-			backgrounds[2] = ImageIO.read(new File("Touhou Boss 3 Background.png"));
+			backgrounds[0] = ImageIO.read(new File("Images/Touhou Boss 1 Background.png"));
+			backgrounds[1] = ImageIO.read(new File("Images/Touhou Boss 2 Background.png"));
+			backgrounds[2] = ImageIO.read(new File("Images/Touhou Boss 3 Background.png"));
 			
 			// Sidebars
-			lifeIcon = ImageIO.read(new File("Touhou Life.png"));
-			bombIcon = ImageIO.read(new File("Touhou Bomb.png"));
-			logo = ImageIO.read(new File("Touhou Sidebar Logo.png"));
-			sidebar = ImageIO.read(new File("Touhou Sidebar Background.png"));
+			lifeIcon = ImageIO.read(new File("Images/Touhou Life.png"));
+			bombIcon = ImageIO.read(new File("Images/Touhou Bomb.png"));
+			logo = ImageIO.read(new File("Images/Touhou Sidebar Logo.png"));
+			sidebar = ImageIO.read(new File("Images/Touhou Sidebar Background.png"));
 			
 			// Player Spritesheets
-			Player1.setSpriteSheet(ImageIO.read(new File("Touhou Reimu Hakurei.png")));
-			Player1.setPortrait(ImageIO.read(new File("Touhou Reimu Portrait.png")));
-			Player2.setSpriteSheet(ImageIO.read(new File("Touhou Marisa Kirisame.png")));
-			Player2.setPortrait(ImageIO.read(new File("Touhou Marisa Portrait.png")));
-			Player3.setSpriteSheet(ImageIO.read(new File("Touhou Sanae Kochiya.png")));
-			Player3.setPortrait(ImageIO.read(new File("Touhou Sanae Portrait.png")));
+			Player1.setSpriteSheet(ImageIO.read(new File("Images/Touhou Reimu Hakurei.png")));
+			Player1.setPortrait(ImageIO.read(new File("Images/Touhou Reimu Portrait.png")));
+			Player2.setSpriteSheet(ImageIO.read(new File("Images/Touhou Marisa Kirisame.png")));
+			Player2.setPortrait(ImageIO.read(new File("Images/Touhou Marisa Portrait.png")));
+			Player3.setSpriteSheet(ImageIO.read(new File("Images/Touhou Sanae Kochiya.png")));
+			Player3.setPortrait(ImageIO.read(new File("Images/Touhou Sanae Portrait.png")));
 			
 			// Enemy Spritesheets
-			Boss1.setSpriteSheet(ImageIO.read(new File("Touhou Cirno.png")));
-			Boss1.setPortrait(ImageIO.read(new File("Touhou Cirno Portrait.png")));
-			Boss2.setSpriteSheet(ImageIO.read(new File("Touhou Sakuya.png")));
-			Boss2.setPortrait(ImageIO.read(new File("Touhou Sakuya Portrait.png")));
-			Boss3.setSpriteSheet(ImageIO.read(new File("Touhou Yukari.png")));
-			Boss3.setPortrait(ImageIO.read(new File("Touhou Yukari Portrait.png")));
+			Boss1.setSpriteSheet(ImageIO.read(new File("Images/Touhou Cirno.png")));
+			Boss1.setPortrait(ImageIO.read(new File("Images/Touhou Cirno Portrait.png")));
+			Boss2.setSpriteSheet(ImageIO.read(new File("Images/Touhou Sakuya.png")));
+			Boss2.setPortrait(ImageIO.read(new File("Images/Touhou Sakuya Portrait.png")));
+			Boss3.setSpriteSheet(ImageIO.read(new File("Images/Touhou Yukari.png")));
+			Boss3.setPortrait(ImageIO.read(new File("Images/Touhou Yukari Portrait.png")));
 			
 			// Bullet Spritesheets
-			Bullet.setSpriteSheet(ImageIO.read(new File("Touhou Objects and Projectiles.png")));
-			Player.setHitboxSprite(ImageIO.read(new File("Touhou Objects and Projectiles.png")).getSubimage(92, 257, 16, 16));
-			Player2Bomb.setSprite(ImageIO.read(new File("Touhou Player 2 Bomb.png")));
+			Bullet.setSpriteSheet(ImageIO.read(new File("Images/Touhou Objects and Projectiles.png")));
+			Player.setHitboxSprite(ImageIO.read(new File("Images/Touhou Objects and Projectiles.png")).getSubimage(92, 257, 16, 16));
+			Player2Bomb.setSprite(ImageIO.read(new File("Images/Touhou Player 2 Bomb.png")));
 			
 			// Music
-			AudioInputStream sound = AudioSystem.getAudioInputStream(new File ("boss1theme.wav"));
+			AudioInputStream sound = AudioSystem.getAudioInputStream(new File ("Sounds/boss1theme.wav"));
 			music[0] = AudioSystem.getClip();
 			music[0].open(sound);
-			sound = AudioSystem.getAudioInputStream(new File ("boss2theme.wav"));
+			sound = AudioSystem.getAudioInputStream(new File ("Sounds/boss2theme.wav"));
 			music[1] = AudioSystem.getClip();
 			music[1].open(sound);
-			sound = AudioSystem.getAudioInputStream(new File ("boss3theme.wav"));
+			sound = AudioSystem.getAudioInputStream(new File ("Sounds/boss3theme.wav"));
 			music[2] = AudioSystem.getClip();
 			music[2].open(sound);
 			for (int i = 0; i < music.length; i++) {
@@ -436,7 +436,7 @@ public class Main extends JPanel implements KeyListener {
 	    try
 	    {
 	        Clip clip = AudioSystem.getClip();
-	        AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(file));
+	        AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("Sounds/" + file));
 	        clip.open(inputStream);
 	        FloatControl volume = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
 	        volume.setValue(-15.0f);

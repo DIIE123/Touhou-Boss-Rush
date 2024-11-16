@@ -85,7 +85,7 @@ public abstract class BasicObject {
 	    try
 	    {
 	        Clip clip = AudioSystem.getClip();
-	        AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(file));
+	        AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("Sounds/" + file));
 	        clip.open(inputStream);
 	        FloatControl volume = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
 	        volume.setValue(-15.0f);
