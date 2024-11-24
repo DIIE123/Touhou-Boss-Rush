@@ -61,10 +61,10 @@ After clearing a stage, your score will be increased by the following amounts:
 ### Game Controls
 | Keybind      | Description          |
 | -----------  | -----------          |
-| W            | Move Up              |
-| A            | Move Left            |
-| S            | Move Down            |
-| D            | Move Right           |
+| Up Arrow     | Move Up              |
+| Left Arrow   | Move Left            |
+| Down Arrow   | Move Down            |
+| Right Arrow  | Move Right           |
 | Z            | Shoot                |
 | X            | Bomb                 |
 | Shift        | Focus                |
